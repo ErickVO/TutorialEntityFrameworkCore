@@ -10,7 +10,7 @@ namespace Ejemplos.DAL
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server = .\SQLEXPRESS; Database=EFCore-SchoolDB; Trusted_Connection=True");
+            optionsBuilder.UseSqlServer(@"Server = .\SQLEXPRESS; Database=Core-SchoolDB; Trusted_Connection=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -30,8 +30,8 @@ namespace Ejemplos.DAL
 
 
 
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Grade> Grades { get; set; }
+        public DbSet<Student> Student { get; set; }
+        public DbSet<Grade> Grade { get; set; }
       
     }
 }
